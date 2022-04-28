@@ -1,9 +1,11 @@
 pipeline {
-   agent none
+    agent {
+        docker { image 'node:16.13.1-alpine' }
+    }
     stages {
         stage('Test') {
             steps {
-                sh 'docker build -t gph .'
+                sh 'node --version'
             }
         }
     }
