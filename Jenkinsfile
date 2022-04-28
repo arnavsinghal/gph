@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                docker build -t gh .
+                docker.build("getintodevops/hellonode")
             }
         }
     }
